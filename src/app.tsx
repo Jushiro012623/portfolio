@@ -75,7 +75,7 @@ const App = () => {
         <AppRouter />
 
         <ScrollToTop />
-        <div className="fixed bottom-0 w-full z-20 pointer-events-none max-h-[20rem] h-[13vh] ">
+        <div className="fixed bottom-0 w-full z-20 pointer-events-none h-[8vh] md:h-[13vh]">
             <GradualBlurMemo
                 target="parent"
                 position="bottom"

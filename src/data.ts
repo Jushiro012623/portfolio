@@ -5,6 +5,8 @@ export default {
     email: "ivanallen64@gmail.com",
     profile_path: "/assets/me.jpg",
     career_role: "Sofware Developer",
+    tagline:"",
+    address: "Manila, Metro-Manila, PH",
     phone: '09125279754',
     career_desc: "I specialize in building scalable, maintainable web applications using modern frontend and backend technologies",
     tech_stack: [

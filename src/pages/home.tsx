@@ -8,9 +8,10 @@ import { HeroSection } from "@/sections/hero";
 import { ProjectSection } from "@/sections/project";
 import CountUp from "@/components/count";
 import ContactComponent from "@/components/contact-component";
-import data from '@/data.ts'
-import {CountLoader} from "@/components/count-loader";
+import data from "@/data.ts";
+import { CountLoader } from "@/components/count-loader";
 import ExperienceSection from "@/sections/experience";
+import Contact from "@/sections/contact";
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
     const [showContactTip, setShowContactTip] = useState(false); // NEW
@@ -36,7 +37,8 @@ const HomePage = () => {
             const scrollPosition = window.scrollY + window.innerHeight;
             const pageHeight = document.documentElement.scrollHeight;
 
-            if (scrollPosition >= pageHeight - 400) { // 50px from bottom
+            if (scrollPosition >= pageHeight - 400) {
+                // 50px from bottom
                 setShowContactTip(true);
             } else {
                 setShowContactTip(false);
@@ -49,7 +51,7 @@ const HomePage = () => {
     return (
         <Fragment>
             {/* PAGE LOADER */}
-            {loading && <CountLoader slideUp={slideUp}/>}
+            {loading && <CountLoader slideUp={slideUp} />}
 
             {/* BACKGROUND RAY */}
             <LightRaysBackground />
@@ -68,9 +70,8 @@ const HomePage = () => {
                         "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
                     WebkitMaskImage:
                         "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
-                }}
-            >
-            <LogoLoop
+                }}>
+                <LogoLoop
                     logos={data.tech_stack}
                     speed={50}
                     direction="left"
@@ -89,14 +90,13 @@ const HomePage = () => {
             <ProjectSection />
             <ExperienceSection />
             <BlogSection />
-            <div className="h-20 w-full"/>
-
 
             {/* CONTACT POP */}
-            {showContactTip && (
-                <ContactComponent />
-            )}
-
+            {/*{showContactTip && (*/}
+            {/*    <ContactComponent />*/}
+            {/*)}*/}
+            <Contact />
+            <div className="h-32 w-full" />
         </Fragment>
     );
 };

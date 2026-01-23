@@ -10,13 +10,16 @@ const Card = ({ title, description, src, url, i, color, targetScale, preview}: a
     return (
         <div
             ref={container}
-            className="h-screen flex items-start justify-center sticky top-40 "
+            className="h-screen flex items-start justify-center sticky top-32 md:top-40 "
         >
             <div
                 ref={cardRef}
                 className={`glass-balanced transition-colors duration-200 flex flex-col relative md:h-[500px] w-[1000px] p-[50px] origin-top border-2 border-white/10 rounded-3xl overflow-hidden ${color}`}
                 style={{
-                    top: `calc(-5vh + ${i * 40}px)`,
+                    top: `${window.innerWidth < 768
+                        ? `calc(-2.5vh + ${i * 20}px)`  
+                        : `calc(-5vh + ${i * 40}px)`
+                    }`,
                 }}
             >
 
@@ -29,7 +32,7 @@ const Card = ({ title, description, src, url, i, color, targetScale, preview}: a
 
                         <span className="hidden md:block h-5 w-full" />
 
-                        <p className="hidden md:block text-base first-letter:text-3xl tracking-wide text-accent">
+                        <p className="mt-5 md:mt-0 block text-base first-letter:text-3xl tracking-wide text-accent">
                             {description}
                         </p>
 
