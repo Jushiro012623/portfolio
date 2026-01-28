@@ -14,7 +14,8 @@ const Card = ({ title, description, src, url, i, color, targetScale, preview}: a
         >
             <div
                 ref={cardRef}
-                className={`glass-balanced transition-colors duration-200 flex flex-col relative md:h-[500px] w-[1000px] p-[50px] origin-top border-2 border-white/10 rounded-3xl overflow-hidden ${color}`}
+                className={`glass-balanced transition-colors duration-200 flex flex-col md:h-[500px] w-[1000px] p-[50px] origin-top border-2 border-white/10 rounded-3xl overflow-hidden ${color}`}
+                
                 style={{
                     top: `${window.innerWidth < 768
                         ? `calc(-2.5vh + ${i * 20}px)`  
@@ -40,7 +41,7 @@ const Card = ({ title, description, src, url, i, color, targetScale, preview}: a
                             href={url}
                             target="_blank"
                             rel="noreferrer"
-                            className="hidden md:block overflow-hidden text-accent hover:text-primary text-sm !absolute bottom-0 left-0 transition-colors glass-balanced py-3 px-6"
+                            className="hidden md:block overflow-hidden text-accent hover:text-primary text-sm !absolute! bottom-0 left-0 transition-colors glass-balanced py-3 px-6"
                         >
                             {preview === "DEMO" ? "View Demo" : "Live Preview"}
                         </a>
@@ -62,7 +63,7 @@ const Card = ({ title, description, src, url, i, color, targetScale, preview}: a
                                 "
                             />
                             <GlareHover
-                                className="!size-full !border-none !absolute top-0 left-0"
+                                className="size-full! border-none! absolute! top-0 left-0"
                                 glareOpacity={0.3}
                                 glareAngle={-30}
                                 glareSize={300}
