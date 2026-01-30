@@ -2,7 +2,17 @@ import { useRef } from "react";
 import useCardScale from "./hooks";
 import GlareHover from "@/components/glare-hover";
 
-const Card = ({ title, description, src, url, i, color, targetScale, preview}: any) => {
+const Card = ({
+    title,
+    description,
+    src,
+    url,
+    i,
+    color,
+    targetScale,
+    preview,
+    stacks,
+}: any) => {
     const { imageRef, cardRef, container } = useCardScale(targetScale);
 
     const imgRef = useRef<HTMLImageElement>(null);
@@ -10,20 +20,17 @@ const Card = ({ title, description, src, url, i, color, targetScale, preview}: a
     return (
         <div
             ref={container}
-            className="h-screen flex items-start justify-center sticky top-32 md:top-40 "
-        >
+            className="h-screen flex items-start justify-center sticky top-32 md:top-40 ">
             <div
                 ref={cardRef}
                 className={`glass-balanced transition-colors duration-200 flex flex-col md:h-[500px] w-[1000px] p-[50px] origin-top border-2 border-white/10 rounded-3xl overflow-hidden ${color}`}
-                
                 style={{
-                    top: `${window.innerWidth < 768
-                        ? `calc(-2.5vh + ${i * 20}px)`  
-                        : `calc(-5vh + ${i * 40}px)`
+                    top: `${
+                        window.innerWidth < 768
+                            ? `calc(-2.5vh + ${i * 20}px)`
+                            : `calc(-5vh + ${i * 40}px)`
                     }`,
-                }}
-            >
-
+                }}>
                 <div className="flex h-full md:mt-[50px] gap-[50px] flex-col md:flex-row">
                     {/* Text Section */}
                     <div className="md:h-full w-full md:w-[40%] relative text-primary">
@@ -36,13 +43,17 @@ const Card = ({ title, description, src, url, i, color, targetScale, preview}: a
                         <p className="mt-5 md:mt-0 block text-base first-letter:text-3xl tracking-wide text-accent">
                             {description}
                         </p>
-
+                        <span className="hidden md:block h-6 w-full" />
+                        <div className="md:flex hidden">
+                            {stacks.map((tech: string, idx: number) => (
+                                <img key={idx} src={`/assets/${tech}`} alt={tech} className="w-8 h-8 mx-2" />
+                            ))}
+                        </div>
                         <a
                             href={url}
                             target="_blank"
                             rel="noreferrer"
-                            className="hidden md:block overflow-hidden text-accent hover:text-primary text-sm !absolute! bottom-0 left-0 transition-colors glass-balanced py-3 px-6"
-                        >
+                            className="hidden md:block overflow-hidden text-accent hover:text-primary text-sm absolute! bottom-0 left-0 transition-colors glass-balanced py-3 px-6">
                             {preview === "DEMO" ? "View Demo" : "Live Preview"}
                         </a>
                     </div>
@@ -81,12 +92,10 @@ const Card = ({ title, description, src, url, i, color, targetScale, preview}: a
                         transition-all duration-500  flex items-center justify-center gradient-4 glass-balanced overflow-hidden
                         !w-full !h-10 text-sm 
                 `}
-                    onClick={() => window.open(url, "_blank")}
-                >
+                    onClick={() => window.open(url, "_blank")}>
                     {preview === "DEMO" ? "View Demo" : "Live Preview"}
                 </button>
             </div>
-
         </div>
     );
 };

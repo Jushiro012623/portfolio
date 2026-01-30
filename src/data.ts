@@ -34,6 +34,7 @@ export default {
             color: "gradient-2",
             img: "shadow-lg",
             preview: "LIVE",
+            stacks: [ "laravel.svg", 'tailwind.svg', 'vite.svg', 'typescript.svg', 'react.svg'],
         },
         {
             title: "Oceanwide Enrollment",
@@ -43,6 +44,7 @@ export default {
             color: "gradient-2",
             img: "shadow-lg",
             preview: "LIVE",
+            stacks: [ "laravel.svg", 'tailwind.svg', 'vite.svg'],
         },
         {
             title: "Barangay Management",
@@ -52,6 +54,7 @@ export default {
             color: "gradient-3",
             img: "shadow-lg shadow-neutral-800",
             preview: "DEMO",
+            stacks: [ "react.svg", "nestjs.svg", 'tailwind.svg', 'typescript.svg'],
         },
         {
             title: "Triumphs Co. E-Commerce",
@@ -61,6 +64,7 @@ export default {
             color: "gradient-1",
             img: "shadow-lg shadow-neutral-800",
             preview: "DEMO",
+            stacks: [ "react.svg", 'tailwind.svg', 'typescript.svg'],
         },
         {
             title: "AI Smart Resume Analyzer",
@@ -70,6 +74,7 @@ export default {
             color: "gradient-1",
             img: "shadow-lg",
             preview: "DEMO",
+            stacks: [ "react.svg", "node.svg", 'tailwind.svg', 'typescript.svg'],
         }
 
     ],
