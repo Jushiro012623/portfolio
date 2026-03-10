@@ -4,10 +4,10 @@ export default {
     linkedin: "https://www.linkedin.com/in/ivanmacabontoc/",
     email: "ivanallen64@gmail.com",
     profile_path: "/assets/me.jpg",
-    career_role: "Sofware Developer",
+    career_role: "Solution Engineer",
     tagline:"",
     address: "Manila, Metro-Manila, PH",
-    phone: '09125279754',
+    phone: '+63-912-5279-754',
     career_desc: "I specialize in building scalable, maintainable web applications using modern frontend and backend technologies",
     tech_stack: [
         {src: "/assets/laravel.svg", alt: "laravel icon"},
@@ -75,6 +75,16 @@ export default {
             img: "shadow-lg",
             preview: "DEMO",
             stacks: [ "react.svg", "node.svg", 'tailwind.svg', 'typescript.svg'],
+        },
+        {
+            title: "IPhone 15 Website",
+            description: "Cloned an iPhone 15 website with responsive design, interactive UI elements, and smooth animations to mimic the official site experience.",
+            src: "iphone.png",
+            url: "https://iphone-clone-green.vercel.app/",
+            color: "gradient-1",
+            img: "shadow-lg",
+            preview: "DEMO",
+            stacks: [ "react.svg", 'tailwind.svg', 'typescript.svg'],
         }
 
     ],
@@ -92,9 +102,9 @@ export default {
             start: "January 2023",
             company: "DepEd - Manila",
             end: "May 2023",
-            desc: "Designed new ID layouts as a Graphic Designer and developed a responsive budget management system as a Frontend Developer, creating intuitive interfaces and ensuring smooth user experience. ",
+            desc: "Designed and developed a responsive budget management system as a Frontend Developer, creating intuitive interfaces and ensuring smooth user experience. ",
             logo: "/assets/deped.webp",
-            position: "Frontend Developer / Graphic Designer - Intern",
+            position: "Frontend Developer - Intern",
             logoAlt: "DEPED LOGO"
         }
     ]
