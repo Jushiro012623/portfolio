@@ -4,7 +4,7 @@ export default {
     linkedin: "https://www.linkedin.com/in/ivanmacabontoc/",
     email: "ivanallen64@gmail.com",
     profile_path: "/assets/me.jpg",
-    career_role: "Solution Engineer",
+    career_role: "Software Developer",
     tagline:"",
     address: "Manila, Metro-Manila, PH",
     phone: '+63-912-5279-754',
