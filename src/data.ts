@@ -68,7 +68,7 @@ export default {
             color: "gradient-1",
             img: "shadow-lg shadow-neutral-800",
             preview: "LIVE",
-            stacks: [ "mongodb.svg", 'tailwind.svg', 'typescript.svg', 'nextjs.svg],
+            stacks: [ "node.svg", 'tailwind.svg', 'typescript.svg', 'nextjs.svg],
         },
         {
             title: "AI Smart Resume Analyzer",
