@@ -14,6 +14,7 @@ export default {
         {src: "/assets/react.svg", alt: "react icon"},
         {src: "/assets/docker.svg", alt: "docker icon"},
         {src: "/assets/git.svg", alt: "git icon"},
+        {src: "/assets/dotnet.svg", alt: "dotnet icon"},
         {src: "/assets/nextjs.svg", alt: "nextjs icon"},
         {src: "/assets/node.svg", alt: "node icon"},
         {src: "/assets/typescript.svg", alt: "typescript icon"},
