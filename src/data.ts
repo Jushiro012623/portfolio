@@ -2,7 +2,7 @@ export default {
     name: "Ivan Macabontoc",
     github: "https://github.com/Jushiro012623",
     linkedin: "https://www.linkedin.com/in/ivanmacabontoc/",
-    email: "ivanallen64@gmail.com",
+    email: "ivanmacabontoc@gmail.com",
     profile_path: "/assets/me.jpg",
     career_role: "Software Developer",
     tagline:"",
